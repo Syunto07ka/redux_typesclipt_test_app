@@ -23,5 +23,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333"
+  }
 }
