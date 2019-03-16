@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './Main.css'
+import './Main.css';
+import NewPost from '../../components/NewPost';
 
 class Main extends Component {
   render() {
@@ -9,7 +10,7 @@ class Main extends Component {
             <p>
               Post Listだお
             </p>
-          <input type="string" />
+            <NewPost />
         </main>
       </div>
     );
