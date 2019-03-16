@@ -2,15 +2,16 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.css';
-import store from './redux/store';
-import routes from './routes/index';
+// import store from './redux/store';
+// import routes from './routes/index';
 import App from './containers/App/App';
+import Main from './containers/Main/Main';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <Provider store={ store }>
-      <App />
-    </Provider>,
+    // <Provider>
+      <Main />,
+    // </Provider>,
     document.getElementById('root')
 );
 
