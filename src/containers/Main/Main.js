@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './Main.css'
+import './Main.css';
+import PostList from '../../components/PostList';
+import NewPost from '../../components/NewPost';
 
 class Main extends Component {
   render() {
     return (
       <div>
         <main>
-            <p>
-              Post Listだお
-            </p>
-          <input type="string" />
+            <PostList />
+            <NewPost />
         </main>
       </div>
     );
