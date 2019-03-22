@@ -2,4 +2,6 @@ import * as React from 'react';
 import { createStore } from 'redux';
 import reducer from './reducer';
 
-export default store = createStore(reducer);
+const store = createStore(reducer);
+
+export default store;
