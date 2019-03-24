@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deletePost } from '../../redux/modules/posts';
+import Post from '../../components/Post/index';
 import './PostList.css';
 
 const mapStateToProps = state => ({
@@ -11,17 +12,13 @@ const mapDispatchToProps = dispatch => ({
     deletePost: id => dispatch(deletePost(id))
 })
 
-const postList = ({ posts, deletePost }) => {
+const PostList = ({ posts, deletePost }) => {
     return (
         <>
           <div>Post List だお</div>
-          <ul>
-            {posts.map(post => (
-                <li key={String(post.id)}>
-                  {post.text}<button onClick={() => deletePost(post.id)}>削除</button>
-                </li>
-            ))}
-          </ul>
+          {posts.map(post => (
+              <Post key={post.id} {...post} onClick={() => deletePost(post.id)} />
+          ))}
         </>
     );
 }
@@ -29,4 +26,4 @@ const postList = ({ posts, deletePost }) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(postList);
+)(PostList);

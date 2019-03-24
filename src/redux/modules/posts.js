@@ -25,7 +25,7 @@ const posts = (state = [], action) => {
             ];
         case 'DELETE_POST':
             return state.map(post =>
-                post.id === action.id ? {} : post,
+                post.id === action.id ? {id: post.id} : post,
             );
         default:
             return state;
