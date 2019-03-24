@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Main.css';
-import PostList from '../../components/PostList';
-import NewPost from '../../components/NewPost';
+import PostList from '../PostList/PostList';
+import AddPost from '../AddPost/AddPost';
 
 class Main extends Component {
   render() {
@@ -9,7 +9,7 @@ class Main extends Component {
       <div>
         <main>
             <PostList />
-            <NewPost />
+            <AddPost />
         </main>
       </div>
     );
