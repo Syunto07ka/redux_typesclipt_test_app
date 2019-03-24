@@ -12,6 +12,7 @@ export const deletePost = id =>({
     id
 });
 
+// reducer
 const posts = (state = [], action) => {
     switch (action.type) {
         case 'ADD_POST':
