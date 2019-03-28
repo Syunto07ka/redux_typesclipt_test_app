@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deletePost } from '../../redux/modules/posts';
+import { deletePost, editPost } from '../../redux/modules/posts';
 import Post from '../../components/Post/index';
 import './PostList.css';
 
@@ -9,10 +9,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    deletePost: id => dispatch(deletePost(id))
+    deletePost: id => dispatch(deletePost(id)),
+    editPost: post => dispatch(editPost(post))
 })
 
-const PostList = ({ posts, deletePost }) => {
+const PostList = ({ posts, deletePost, editPost }) => {
     return (
         <>
           <div>Post List だお</div>

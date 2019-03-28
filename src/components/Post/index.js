@@ -1,14 +1,16 @@
 import React from 'react';
 
-const Post = ({ text, id, onClick }) => {
-    if (!text) {
+const Post = ({ content, name, id, onClick }) => {
+    if (!content) {
         return (
             <div></div>
         );
     } else {
         return (
             <div>
-                {text}<button onClick={onClick}>削除</button>
+                <div>コンテント: {content}</div>
+                <div>名前: {name}</div>
+                <button onClick={onClick}>削除</button>
             </div>
         );
     }
